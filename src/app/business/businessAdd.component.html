@@ -1,0 +1,204 @@
+<div class="panel panel-primary">
+  <div class="panel-heading" style='font-size:small'>
+    <h4>Add Business</h4>
+  </div>
+  <div class="panel-body">
+
+      <div class="container" *ngIf="business">
+        <div [hidden]="submitted">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+           <!-- #addForm="ngForm" (ngSubmit)="addDetails(addForm.value)" (submit)="addBusiness( company.value,
+        category.value,
+        years_in_business.value,
+        description.value,
+        phone.value,
+        email.value,
+        street_address.value,
+        city.value,  state.value, zipcode.value)" -->
+          <form  id="formbus" [formGroup]="busForm"  (ngSubmit)="onSubmit()"  novalidate>
+
+            <div class="row" >
+
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group" >
+                  <label for="company">Company
+                 <input  class="form-control "  type="text" formControlName="company"  placeholder="Company Name" #company required >
+                  </label>
+                <div class="error alert alert-danger " *ngIf="busForm.get('company').hasError('required') && busForm.get('company').touched">
+                     Company is required
+                         </div>
+                </div>
+
+
+                 <!-- <div *ngIf="formErrors.company" class="alert alert-danger">
+                 {{ formErrors.company }}
+                  </div> -->
+              </div>
+
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Category
+                 <select name="category" class="form-control" #category formControlName="category" >
+                   <option value="0">Select</option>
+                   <option *ngFor="let cat of categories" value="{{cat.name}}" required>
+                     {{cat.name}}
+                   </option>
+                 </select>
+                  </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('category').hasError('required') && busForm.get('category').touched">
+                     Category is required
+                         </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label>Years In Business
+                <input type="number"  class="form-control" placeholder="Years In Business"  #years_in_business formControlName="years_in_business" required >
+              </label>
+              <div class="error alert alert-danger" *ngIf="busForm.get('years_in_business').hasError('required') && busForm.get('years_in_business').touched">
+                     Years In Business is required
+                         </div>
+                </div>
+
+
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Phone
+                 <input type="number" class="form-control" placeholder="Phone"  #phone formControlName="phone" required >
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('phone').hasError('required') && busForm.get('phone').touched">
+                     Phone is required
+                         </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Street Address
+                 <input type="text" class="form-control" placeholder="Street Address"  #street_address formControlName="street_address" required >
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('street_address').hasError('required') && busForm.get('street_address').touched">
+                     Street Address is required
+                         </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">State
+                 <input type="text" class="form-control"  placeholder="State"  #state formControlName="state" required>
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('state').hasError('required') && busForm.get('state').touched">
+                     State is required
+                         </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+
+                <div class="form-group">
+                  <label class="control-label">Email
+                 <input type="email" class="form-control" placeholder="Email"  #email formControlName="email" required >
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('email').hasError('required') && busForm.get('email').touched">
+                     Email is required
+                         </div>
+                </div>
+
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">City
+                 <input type="text" class="form-control" placeholder="City"   #city formControlName="city" required >
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('city').hasError('required') && busForm.get('city').touched">
+                     City is required
+                         </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Zipcode
+                 <input type="text"  class="form-control" placeholder="Zipcode"  #zipcode formControlName="zipcode" required>
+               </label>
+                <div class="error alert alert-danger" *ngIf="busForm.get('zipcode').hasError('required') && busForm.get('zipcode').touched">
+                     ZipCode is required
+                         </div>
+                </div>
+              </div>
+
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label>Description
+               <textarea #description formControlName="description" required ></textarea>
+            </label>
+              <div class="error alert alert-danger" *ngIf="busForm.get('description').hasError('required') && busForm.get('description').touched">
+                     You must specify a description that's between 10 and 500 characters.
+                         </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <!--<span class="glyphicon glyphicon-send"></span>\-->
+                <button type="submit" class="btn btn-primary" [disabled]="!busForm.valid"><span class="glyphicon glyphicon-send"></span>Submit</button>
+
+                <!--  <input type="submit" class="btn btn-primary" value="Submit"> -->
+              </div>
+            </div>
+
+          </form>
+        </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+<script>
+$(document).ready(function() {
+    $('#loginForm').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            company: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_\.]+$/,
+                        message: 'The username can only consist of alphabetical, number, dot and underscore'
+                    }
+                }
+            },
+
+        }
+    });
+});
+</script>

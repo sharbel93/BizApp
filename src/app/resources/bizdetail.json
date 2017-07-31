@@ -1,0 +1,95 @@
+  {
+    "businesses" : [
+      {
+     "productid":"1",
+     "company" : "JumpXS",
+    "category" : "Retail",
+    "phone" : "1-(414)274-3262",
+    "years_in_business": "10",
+    "email" : "jump@gmail.com",
+    "street_address" : "3014500 keniu Avenue",
+    "city" : "dela Beach",
+    "state" : "Florida",
+    "zipcode" : "625884",
+    "description" : "The most common form of company used for business ventures.Specifically, a limited company is a company in which the liability of each shareholder is limited to the amount individually invested with corporations being the most common example of a limited company."
+  },
+   {
+     "productid":"2",
+     "company" : "Lazz",
+    "category" : "IT",
+    "phone" : "1-(561)544-0208",
+   "years_in_business": "8",
+    "email" : "lazz@gmail.com",
+    "street_address" : "3014500 keniu Avenue",
+    "city" : "cool Beach",
+    "state" : "La",
+    "zipcode" : "524464",
+    "description" : "The most common form of company used for business ventures.Specifically, a limited company is a company in which the liability of each shareholder is limited to the amount individually invested with corporations being the most common example of a limited company."
+  },
+   {
+     "productid":"3",
+     "company" : "Realfire",
+    "category" : "Construction",
+    "phone" : "1-(727)531-0918",
+    "years_in_business": "8",
+    "email" : "realfire@gmail.com",
+    "street_address" : "3014500 keniu Avenue",
+    "city" : "dela Beach",
+    "state" : "Florida",
+    "zipcode" : "625884",
+    "description" : "The most common form of company used for business ventures.Specifically, a limited company is a company in which the liability of each shareholder is limited to the amount individually invested with corporations being the most common example of a limited company."
+  },
+   {
+     "productid":"4",
+     "company" : "Innotype",
+    "category" : "IT",
+    "phone" : "1-(805)-539-1078",
+    "years_in_business": "10",
+    "email" : "innotype@gmail.com",
+    "street_address" : "3014500 keniu Avenue",
+    "city" : "dela Beach",
+    "state" : "Florida",
+    "zipcode" : "625884",
+    "description" : "The most common form of company used for business ventures.Specifically, a limited company is a company in which the liability of each shareholder is limited to the amount individually invested with corporations being the most common example of a limited company."
+  },
+   {
+     "productid":"5",
+     "company" : "TechGuy",
+    "category" : "IT",
+    "phone" : "1-(978)-539-1078",
+    "years_in_business": "10",
+    "email" : "techguy@gmail.com",
+    "street_address" : "3014500 keniu Avenue",
+    "city" : "dela Beach",
+    "state" : "Florida",
+    "zipcode" : "625884",
+    "description" : "The most common form of company used for business ventures.Specifically, a limited company is a company in which the liability of each shareholder is limited to the amount individually invested with corporations being the most common example of a limited company."
+  }
+    ],
+"categories": [
+  {
+ "name": "IT"
+  },
+  {
+  "name": "Retail"
+  },
+  {
+ "name": "Restaurant"
+  },
+  {
+"name": "Construction"
+  },
+  {
+"name": "Auto"
+  },
+{
+"name": "Animal Care"
+}
+]
+
+
+
+
+}
+
+

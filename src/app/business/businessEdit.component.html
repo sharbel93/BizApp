@@ -1,0 +1,116 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+   <h5>Business Edit</h5>
+  </div>
+
+  <div class="panel-body">
+    <div class="container" *ngIf="business">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <form role="form" (submit)="updateBusiness()">
+
+          <div class="row">
+
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Company
+                 <input  class="form-control" type="text" [(ngModel)]="activeCompany" name="company" placeholder="Company Name" #company></label>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Category
+                 <select name="category" [(ngModel)]="activeCategory" class="form-control">
+                   <option value="0">Select</option>
+                   <option><!-- option fields--></option>
+                 </select>
+                  </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label>Years In Business
+                <input type="text"  [(ngModel)]="activeYearsInBusiness" class="form-control" placeholder="Years In Business" name="years_in_business">
+              </label>
+              </div>
+
+
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Phone
+                 <input type="text" class="form-control" [(ngModel)]="activePhone" placeholder="Phone" name="phone">
+               </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Street Address
+                 <input type="text" class="form-control" [(ngModel)]="activeStreetAddress" placeholder="Street Address" name="street_address">
+               </label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">State
+                 <input type="text" class="form-control"  [(ngModel)]="activeState"  placeholder="State" name="state">
+               </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+
+              <div class="form-group">
+                <label class="control-label">Email
+                 <input type="text" class="form-control" [(ngModel)]="activeEmail" placeholder="Email" name="email">
+               </label>
+              </div>
+
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">City
+                 <input type="text" class="form-control"  [(ngModel)]="activeCity" placeholder="City" name="city">
+               </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label">Zipcode
+                 <input type="text"  class="form-control" [(ngModel)]="activeZipcode" placeholder="Zipcode" name="zipcode">
+               </label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <label>Description
+               <textarea [(ngModel)]="activeDescription" name="description"></textarea>
+            </label>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <input type="submit" class="btn btn-primary glyphicon glyphicon-send" value="Submit">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
